@@ -1,39 +1,60 @@
-# Chirpy Starter
+# Chloride / Argon Documentation
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+This is community documentation for **Argon**, the programming language, as implemented by
+**Chloride**, its C-based interpreter (a bytecode compiler + virtual machine).
 
-A minimal, ready-to-use template for creating a blog with the [**Chirpy**][chirpy] Jekyll theme. Get up and running in minutes with all critical files pre-configured.
+If you already know a scripting language like Python or JavaScript, most of this will feel
+familiar. Argon uses `do` blocks instead of `{ }`, and functions are declared as
+`let name(args) = do ... `.
 
-## Why This Starter Exists
+> **Note:** This documentation is written from reading the interpreter's source code and
+> test suite, since the project doesn't yet have complete official docs. If something here
+> looks wrong, trust the source code (and please fix this doc!).
 
-When installing Chirpy through [RubyGems.org][gem], Jekyll can only read a subset of theme files (`_data`, `_layouts`, `_includes`, `_sass`, `assets`) and limited `_config.yml` options from the gem. As a result, users cannot enjoy the full out-of-the-box experience that Chirpy offers.
+## Start here
 
-To unlock all features, the following files must be present in your Jekyll site:
+- [Installation](getting-started/README.md)
+- [Your first program](getting-started/first-program/README.md)
+- [Running the REPL](tooling/repl/README.md)
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
-```
+## Language guide
 
-This starter bundles those files from the latest **Chirpy** release along with a [CD][CD] workflow, so you can start writing immediately.
+- [Variables and `let`](language/variables/README.md)
+- [Operators](language/operators/README.md)
+- [Control flow](language/control-flow/README.md)
+  - [`if` / `else`](language/control-flow/if/README.md)
+  - [`while` loops](language/control-flow/while/README.md)
+  - [`for` loops and iterators](language/control-flow/for/README.md)
+  - [`break` and `continue`](language/control-flow/break-continue/README.md)
+- [Functions](language/functions/README.md)
+- [Strings](language/strings/README.md)
+- [Arrays](language/arrays/README.md)
+- [Dictionaries and tuples](language/dictionaries-and-tuples/README.md)
+- [Classes and objects](language/classes/README.md)
+- [Errors and exceptions](language/error-handling/README.md)
+- [Modules and `import`](language/modules/README.md)
 
-## Usage
+## Standard library
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+- [`term`](standard-library/term/README.md) — printing and input
+- [`maths`](standard-library/maths/README.md)
+- [`random`](standard-library/random/README.md)
+- [`path`](standard-library/path/README.md)
+- [`json`](standard-library/json/README.md)
+- [`file`](standard-library/file/README.md)
+- [`date`](standard-library/date/README.md)
+- [`time`](standard-library/time/README.md)
+- [`network`](standard-library/network/README.md)
+- [`threading`](standard-library/threading/README.md)
+- [`regex`](standard-library/regex/README.md)
 
-## Contributing
+## Tooling
 
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
+- [Command line usage](tooling/README.md)
+- [The REPL](tooling/repl/README.md)
+- [Building from source](tooling/building-from-source/README.md)
 
 ## License
 
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+Chloride is released under the GNU General Public License v3.0 (or later). See the
+project's `LICENSE` file for details.
